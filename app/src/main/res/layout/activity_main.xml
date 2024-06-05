@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/coverbtn"
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover01"
+            android:onClick="changeCover"/>
+        <ImageView
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover00" />
+    </FrameLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:collapseColumns="2"
+        android:layout_marginTop="20dp">
+        <TableRow>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu01" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu02"
+                android:layout_marginBottom="20dp"/>
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu03" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/menu04" />
+        </TableRow>
+    </TableLayout>
+    <GridLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center" />
+
+    </GridLayout>
+
+</GridLayout>
