@@ -37,13 +37,17 @@
         </TableRow>
         <TableRow>
             <ImageView
+                android:id="@+id/menu03"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu03" />
+                android:src="@drawable/menu03"
+                android:onClick="showCustomerServiceMessage"/>
             <ImageView
+                android:id="@+id/menu04"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/menu04" />
+                android:src="@drawable/menu04"
+                android:onClick="showMyPageMessage"/>
         </TableRow>
     </TableLayout>
     <GridLayout
