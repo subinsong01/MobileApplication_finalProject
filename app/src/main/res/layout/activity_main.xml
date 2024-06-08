@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu01" />
             <ImageView
+                android:id="@+id/login_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu02"
