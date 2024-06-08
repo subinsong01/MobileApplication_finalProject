@@ -1,7 +1,6 @@
 package com.shushub.finalproject;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
     public void showMyPageMessage(View view) {
         // 마이페이지 버튼 클릭 시 토스트 메시지 표시
         Toast.makeText(this, "마이페이지버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
+    public void showLoginMessage(View view) {
+        // 로그인 버튼 클릭 시 토스트 메시지 표시
+        Toast.makeText(this, "로그인 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+    }
+
+    public void showBookListMessage(View view) {
+        // 도서 목록 버튼 클릭 시 토스트 메시지 표시
+        Toast.makeText(this, "도서목록 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
     }
 
     private void showLoginDialog() {

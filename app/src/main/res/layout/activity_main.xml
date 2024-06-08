@@ -26,14 +26,17 @@
         android:layout_marginTop="20dp">
         <TableRow>
             <ImageView
+                android:id="@+id/showBookList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="showBookListMessage"
                 android:src="@drawable/menu01" />
             <ImageView
                 android:id="@+id/login_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/menu02"
+                android:onClick="showLoginMessage"
                 android:layout_marginBottom="20dp"/>
         </TableRow>
         <TableRow>
