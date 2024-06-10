@@ -1,13 +1,9 @@
 package com.shushub.finalproject;
 
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 public class activity_book extends AppCompatActivity {
 
     @Override
@@ -15,29 +11,30 @@ public class activity_book extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book); // activity_book 레이아웃을 설정합니다.
 
-        ImageView descriptionBook = findViewById(R.id.description_book);
-        ImageView priceBook = findViewById(R.id.price_book);
+        ImageView descriptionBookButton = findViewById(R.id.description_book);
+        ImageView priceBookButton = findViewById(R.id.price_book);
 
-        descriptionBook.setOnClickListener(new View.OnClickListener() {
+        // 기본 프래그먼트 설정
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new bookSimple())
+                .commit();
+
+        descriptionBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new DescriptionFragment());
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new bookSimple())
+                        .commit();
             }
         });
 
-        priceBook.setOnClickListener(new View.OnClickListener() {
+        priceBookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new PriceBookFragment());
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, new book_detail())
+                        .commit();
             }
         });
-    }
-
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
     }
 }
