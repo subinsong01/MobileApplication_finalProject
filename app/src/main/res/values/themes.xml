@@ -2,9 +2,16 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FinalProject" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="android:windowBackground">@color/background</item> <!-- 기본 배경 색상 설정 -->
+        <item name="android:textColor">@color/text_color</item> <!-- 기본 텍스트 색상 설정 -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.FinalProject" parent="Base.Theme.FinalProject" />
 
+    <!-- 툴바 테마 정의 -->
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@android:color/black</item> <!-- 아이콘 색상 설정 -->
+        <item name="android:textColorPrimary">@android:color/black</item> <!-- 텍스트 색상 설정 -->
+    </style>
 </resources>
