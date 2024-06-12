@@ -1,5 +1,6 @@
 package com.shushub.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -63,27 +64,29 @@ public class activity_book extends AppCompatActivity {
         return true;
     }
 
-/*    @Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        switch (id) {
-            case R.id.home:
-                Toast.makeText(this, "홈으로 선택됨", Toast.LENGTH_SHORT).show();
-                // 홈 화면으로 이동하는 로직 추가
-                return true;
-            case R.id.bookList:
-                Toast.makeText(this, "도서목록 선택됨", Toast.LENGTH_SHORT).show();
-                replaceFragment(new bookSimple());
-                return true;
-            case R.id.bucket:
-                Toast.makeText(this, "장바구니 선택됨", Toast.LENGTH_SHORT).show();
-                // 장바구니 화면으로 이동하는 로직 추가
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (id == R.id.home) {
+            Toast.makeText(this, "홈으로 선택됨", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish(); // 현재 activity 종료
+            return true;
+        } else if (id == R.id.bookList) {
+            Toast.makeText(this, "도서목록 선택됨", Toast.LENGTH_SHORT).show();
+            replaceFragment(new bookSimple());
+            return true;
+        } else if (id == R.id.bucket) {
+            Toast.makeText(this, "장바구니 선택됨", Toast.LENGTH_SHORT).show();
+            // 장바구니 화면으로 이동하는 로직 추가
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-    }*/
+    }
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();

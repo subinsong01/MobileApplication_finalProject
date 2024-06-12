@@ -13,27 +13,6 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
-            android:name=".detail_fragment"
-            android:exported="false" />
-        <activity
-            android:name=".detail_frament"
-            android:exported="false" />
-        <activity
-            android:name=".price_fragment"
-            android:exported="false" />
-        <activity
-            android:name=".fragment_price"
-            android:exported="false" />
-        <activity
-            android:name=".fragment_description"
-            android:exported="false" />
-        <activity
-            android:name=".price_book"
-            android:exported="false" />
-        <activity
-            android:name=".activity_descriptionBook"
-            android:exported="false" />
-        <activity
             android:name=".activity_book"
             android:exported="false" /> <!-- SplashActivity 설정 -->
         <activity
