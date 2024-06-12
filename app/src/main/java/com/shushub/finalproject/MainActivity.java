@@ -1,6 +1,7 @@
 package com.shushub.finalproject;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showLoginDialog();
+            }
+        });
+
+        ImageView showBookListButton = findViewById(R.id.showBookList);
+        showBookListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showBookListMessage(v);
             }
         });
     }
@@ -55,8 +64,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showBookListMessage(View view) {
-        // 도서 목록 버튼 클릭 시 토스트 메시지 표시
-        Toast.makeText(this, "도서목록 버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+        // 도서 목록 버튼 클릭 시 BookActivity로 전환
+        Intent intent = new Intent(MainActivity.this,activity_book.class);
+        startActivity(intent);
     }
 
     private void showLoginDialog() {

@@ -4,16 +4,13 @@
     <item
         android:id="@+id/home"
         android:title="홈으로"
-        app:showAsAction="collapseActionView"
-        />
+        app:showAsAction="never" />
     <item
         android:id="@+id/bookList"
         android:title="도서목록"
-        app:showAsAction="collapseActionView"
-        />
+        app:showAsAction="never" />
     <item
         android:id="@+id/bucket"
         android:title="장바구니"
-        app:showAsAction="collapseActionView"
-        />
+        app:showAsAction="never" />
 </menu>
