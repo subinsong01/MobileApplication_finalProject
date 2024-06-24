@@ -27,6 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".customer_service"></activity> <!--customer_service로 가기-->
     </application>
 
 </manifest>
