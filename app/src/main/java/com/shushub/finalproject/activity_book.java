@@ -38,7 +38,7 @@ public class activity_book extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!isListType1Selected) {
-                    detailButton.setImageResource(R.drawable.list_type1); // 오른쪽 버튼 이미지 변경
+                    detailButton.setImageResource(R.drawable.list_type2); // 오른쪽 버튼 이미지 변경
                     viewSwitchButton.setImageResource(R.drawable.list_type12); // 왼쪽 버튼 이미지 변경
                     replaceFragment(new bookSimple()); // bookSimple 프래그먼트로 전환
                     isListType1Selected = true;
@@ -50,7 +50,7 @@ public class activity_book extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isListType1Selected) {
-                    viewSwitchButton.setImageResource(R.drawable.list_type2); // 왼쪽 버튼 이미지 변경
+                    viewSwitchButton.setImageResource(R.drawable.list_type1); // 왼쪽 버튼 이미지 변경
                     detailButton.setImageResource(R.drawable.list_type12); // 오른쪽 버튼 이미지 변경
                     replaceFragment(new book_detail()); // book_detail 프래그먼트로 전환
                     isListType1Selected = false;
