@@ -15,7 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class activity_book extends AppCompatActivity {
 
-    private boolean isDetailView = false;
+    private boolean isListType1Selected = false; // 왼쪽 버튼이 선택되었는지 여부
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +37,24 @@ public class activity_book extends AppCompatActivity {
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                detailButton.setImageResource(R.drawable.list_type12); // 이미지를 변경
-                replaceFragment(new book_detail()); // book_detail 프래그먼트로 전환
-                isDetailView = true;
+                if (!isListType1Selected) {
+                    detailButton.setImageResource(R.drawable.list_type1); // 오른쪽 버튼 이미지 변경
+                    viewSwitchButton.setImageResource(R.drawable.list_type12); // 왼쪽 버튼 이미지 변경
+                    replaceFragment(new bookSimple()); // bookSimple 프래그먼트로 전환
+                    isListType1Selected = true;
+                }
             }
         });
 
         viewSwitchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isDetailView) {
-                    viewSwitchButton.setImageResource(R.drawable.list_type22); // 클릭 시 리스트 아이콘으로 변경
-                    replaceFragment(new bookSimple());
-                } else {
-                    viewSwitchButton.setImageResource(R.drawable.list_type2); // 클릭 시 그리드 아이콘으로 변경
-                    replaceFragment(new book_detail());
+                if (isListType1Selected) {
+                    viewSwitchButton.setImageResource(R.drawable.list_type2); // 왼쪽 버튼 이미지 변경
+                    detailButton.setImageResource(R.drawable.list_type12); // 오른쪽 버튼 이미지 변경
+                    replaceFragment(new book_detail()); // book_detail 프래그먼트로 전환
+                    isListType1Selected = false;
                 }
-                isDetailView = !isDetailView;
             }
         });
     }
