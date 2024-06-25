@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 
 public class myPage extends AppCompatActivity {
 
@@ -170,7 +170,9 @@ public class myPage extends AppCompatActivity {
             return true;
         } else if (id == R.id.bucket) {
             Toast.makeText(this, "장바구니 선택됨", Toast.LENGTH_SHORT).show();
-            // 장바구니 화면으로 이동하는 로직 추가
+            Intent intent = new Intent(this, cartPage.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             return true;
         } else {
             return super.onOptionsItemSelected(item);

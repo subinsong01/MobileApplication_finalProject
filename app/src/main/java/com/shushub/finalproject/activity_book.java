@@ -82,13 +82,14 @@ public class activity_book extends AppCompatActivity {
             return true;
         } else if (id == R.id.bucket) {
             Toast.makeText(this, "장바구니 선택됨", Toast.LENGTH_SHORT).show();
-            // 장바구니 화면으로 이동하는 로직 추가
+            Intent intent = new Intent(this, cartPage.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
     }
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
