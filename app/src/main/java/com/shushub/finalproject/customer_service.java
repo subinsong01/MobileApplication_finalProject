@@ -71,6 +71,7 @@ public class customer_service extends AppCompatActivity {
             return true;
         } else if (id == R.id.bookList) {
             Toast.makeText(this, "도서목록 선택됨", Toast.LENGTH_SHORT).show();
+            // 도서목록으로 이동하는 코드 추가
             Intent intent = new Intent(this, activity_book.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
@@ -81,11 +82,16 @@ public class customer_service extends AppCompatActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             return true;
+        } else if (id == R.id.action_search) {
+            Toast.makeText(this, "검색 선택됨", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, SearchActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
     }
-
 
     private void addQueryToContainer() {
         String query = queryEditText.getText().toString();
