@@ -96,45 +96,45 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="머신 러닝을 다루는 기술"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="4dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="with 파이썬 사이킷런"
-                    android:textSize="12sp"
-                    android:paddingBottom="4dp"/>
+                    android:textSize="12sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="₩34,000"
-                    android:textSize="14sp"
-                    android:paddingBottom="4dp"/>
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="624쪽"
-                    android:textSize="14sp"
-                    android:paddingBottom="4dp"/>
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="마크 페너, 황준식"
-                    android:textSize="12sp"
-                    android:paddingBottom="4dp"/>
+                    android:textSize="12sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
                     android:text="2020.06.30"
-                    android:textSize="14sp"
-                    android:paddingBottom="4dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
