@@ -30,7 +30,7 @@
         <activity android:name=".customer_service"></activity> <!--customer_service로 가기-->
         <activity android:name=".myPage"></activity>
         <activity android:name=".cartPage" />
-
+        <activity android:name=".SearchActivity" />
     </application>
 
 </manifest>
