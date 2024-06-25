@@ -11,22 +11,10 @@
         android:background="@color/white"
         android:theme="@style/ToolbarTheme" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="40dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="고객센터페이지 입니다"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:padding="3dp"/>
-    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:src="@drawable/customer"/>
 
     <EditText
         android:id="@+id/query_edit_text"

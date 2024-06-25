@@ -1,6 +1,10 @@
 package com.shushub.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +52,39 @@ public class customer_service extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tool_bar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.home) {
+            Toast.makeText(this, "홈으로 선택됨", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish(); // 현재 activity 종료
+            return true;
+        }  else if (id == R.id.bookList) {
+            Toast.makeText(this, "도서목록 선택됨", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, activity_book.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.bucket) {
+            Toast.makeText(this, "장바구니 선택됨", Toast.LENGTH_SHORT).show();
+            // 장바구니 화면으로 이동하는 로직 추가
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     private void addQueryToContainer() {
         String query = queryEditText.getText().toString();
