@@ -6,17 +6,27 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <ImageView
-            android:id="@+id/coverbtn"
             android:layout_width="420dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/cover01"
-            android:onClick="changeCover"/>
+            android:background="#4db5ce"
+            android:src="@drawable/cover00" />
+
         <ImageView
-            android:layout_width="420dp"
+            android:id="@+id/coverbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cover01"
+            android:layout_gravity="center"
+            android:onClick="changeCover"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/cover00" />
     </FrameLayout>
+
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
