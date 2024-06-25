@@ -36,6 +36,22 @@ public class MainActivity extends AppCompatActivity {
                 showBookListMessage(v);
             }
         });
+
+        ImageView customerServiceButton = findViewById(R.id.menu03);
+        customerServiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCustomerServiceMessage(v);
+            }
+        });
+
+        ImageView showMyPageButton = findViewById(R.id.menu04);
+        showMyPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMyPageMessage(v);
+            }
+        });
     }
 
     public void changeCover(View view) { //cover 버튼 누르면 색상 변경
@@ -49,13 +65,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showCustomerServiceMessage(View view) {
-        // 고객센터 버튼 클릭 시 토스트 메시지 표시
-        Toast.makeText(this, "고객센터버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+        // CustomerServiceActivity로 전환
+        Intent intent = new Intent(MainActivity.this, customer_service.class);
+        startActivity(intent);
     }
 
     public void showMyPageMessage(View view) {
-        // 마이페이지 버튼 클릭 시 토스트 메시지 표시
-        Toast.makeText(this, "마이페이지버튼이 클릭되었습니다", Toast.LENGTH_SHORT).show();
+        // 마이페이지 버튼 클릭 시 MyPageActivity로 전환
+        Intent intent = new Intent(MainActivity.this, myPage.class);
+        startActivity(intent);
     }
 
     public void showLoginMessage(View view) {
@@ -65,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showBookListMessage(View view) {
         // 도서 목록 버튼 클릭 시 BookActivity로 전환
-        Intent intent = new Intent(MainActivity.this,activity_book.class);
+        Intent intent = new Intent(MainActivity.this, activity_book.class);
         startActivity(intent);
     }
 
